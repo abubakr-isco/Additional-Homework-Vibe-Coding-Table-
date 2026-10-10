@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Склад — WEPRO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- ===== Боковое меню (бонус) ===== -->
+    <aside class="sidebar">
+      <a class="logo" href="#">WEPRO</a>
+      <nav class="nav">
+        <a class="nav__link" href="#">Дашборд</a>
+        <a class="nav__link" href="#">Заказы</a>
+        <a class="nav__link" href="#">Меню</a>
+        <a class="nav__link nav__link--active" href="#" aria-current="page">Склад</a>
+        <a class="nav__link" href="#">Поставщики</a>
+        <a class="nav__link" href="#">Отчёты</a>
+        <a class="nav__link" href="#">Настройки</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <!-- ===== Шапка страницы (бонус) ===== -->
+      <header class="page-header">
+        <div>
+          <p class="breadcrumbs">Админка / Склад</p>
+          <h1 class="page-title">Склад</h1>
+          <p class="page-subtitle">Остатки на 10 октября, 09:40</p>
+        </div>
+        <button class="button" type="button">Сформировать заказ</button>
+      </header>
+
+      <!-- ===== Карточки сверху (бонус) ===== -->
+      <section class="stats">
+        <article class="stat">
+          <p class="stat__label">Позиций на складе</p>
+          <p class="stat__value">10</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Стоимость остатков</p>
+          <p class="stat__value">83 916 ₽</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Критично</p>
+          <p class="stat__value stat__value--danger">3</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Заканчивается</p>
+          <p class="stat__value stat__value--warn">3</p>
+        </article>
+      </section>
+
+      <!-- ===== Фильтры (бонус) ===== -->
+      <div class="filters">
+        <input class="filters__search" type="search" placeholder="Поиск по названию или поставщику">
+        <div class="chips">
+          <button class="chip chip--active" type="button">Все</button>
+          <button class="chip" type="button">Критично</button>
+          <button class="chip" type="button">Заканчивается</button>
+          <button class="chip" type="button">В норме</button>
+        </div>
+      </div>
+
+      <!-- ===== Таблица склада ===== -->
+      <div class="table-card">
+        <table class="warehouse">
+          <caption class="visually-hidden">Остатки на складе</caption>
+          <thead>
+            <tr>
+              <th scope="col">Позиция</th>
+              <th scope="col">Остаток</th>
+              <th scope="col">Хватит на</th>
+              <th scope="col">Расход / мес</th>
+              <th scope="col">Дозаказать</th>
+              <th scope="col">Цена</th>
+              <th scope="col">На складе</th>
+              <th scope="col">Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="group">
+              <td colspan="8">Ингредиенты и продукты</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Страчателла</span>
+                <span class="item__meta">Сыроварня «Деревенская» · кг</span>
+              </td>
+              <td>2,1 кг</td>
+              <td>1,4 дня</td>
+              <td>45 кг</td>
+              <td>19 кг</td>
+              <td>1 450 ₽</td>
+              <td>3 045 ₽</td>
+              <td><span class="badge badge--danger">Критично</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Пармезан 24 мес.</span>
+                <span class="item__meta">ИталФуд · кг</span>
+              </td>
+              <td>1,2 кг</td>
+              <td>2 дня</td>
+              <td>18 кг</td>
+              <td>8 кг</td>
+              <td>3 200 ₽</td>
+              <td>3 840 ₽</td>
+              <td><span class="badge badge--danger">Критично</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Оливковое масло Extra Virgin</span>
+                <span class="item__meta">ИталФуд · л</span>
+              </td>
+              <td>8 л</td>
+              <td>6 дней</td>
+              <td>36 л</td>
+              <td>9 л</td>
+              <td>1 180 ₽</td>
+              <td>9 440 ₽</td>
+              <td><span class="badge badge--warn">Заканчивается</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Томаты Сан-Марцано</span>
+                <span class="item__meta">ИталФуд · банка 2,5 кг</span>
+              </td>
+              <td>14 шт</td>
+              <td>7 дней</td>
+              <td>60 шт</td>
+              <td>14 шт</td>
+              <td>890 ₽</td>
+              <td>12 460 ₽</td>
+              <td><span class="badge badge--warn">Заканчивается</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Моцарелла фиор ди латте</span>
+                <span class="item__meta">Сыроварня «Деревенская» · кг</span>
+              </td>
+              <td>24 кг</td>
+              <td>12 дней</td>
+              <td>60 кг</td>
+              <td>—</td>
+              <td>980 ₽</td>
+              <td>23 520 ₽</td>
+              <td><span class="badge badge--ok">В норме</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Мука типо 00</span>
+                <span class="item__meta">Мельница «Юг» · кг</span>
+              </td>
+              <td>180 кг</td>
+              <td>22 дня</td>
+              <td>240 кг</td>
+              <td>—</td>
+              <td>95 ₽</td>
+              <td>17 100 ₽</td>
+              <td><span class="badge badge--ok">В норме</span></td>
+            </tr>
+
+            <tr class="group">
+              <td colspan="8">Полуфабрикаты собственного производства</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Тесто для пиццы</span>
+                <span class="item__meta">Заготовочный цех · шар 250 г</span>
+              </td>
+              <td>42 шт</td>
+              <td>0,8 дня</td>
+              <td>1 500 шт</td>
+              <td>660 шт</td>
+              <td>38 ₽</td>
+              <td>1 596 ₽</td>
+              <td><span class="badge badge--danger">Критично</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Соус томатный</span>
+                <span class="item__meta">Заготовочный цех · л</span>
+              </td>
+              <td>9 л</td>
+              <td>3,6 дня</td>
+              <td>75 л</td>
+              <td>26 л</td>
+              <td>210 ₽</td>
+              <td>1 890 ₽</td>
+              <td><span class="badge badge--warn">Заканчивается</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Песто базиликовый</span>
+                <span class="item__meta">Заготовочный цех · кг</span>
+              </td>
+              <td>4,5 кг</td>
+              <td>11 дней</td>
+              <td>12 кг</td>
+              <td>—</td>
+              <td>1 650 ₽</td>
+              <td>7 425 ₽</td>
+              <td><span class="badge badge--ok">В норме</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="item__name">Бульон куриный</span>
+                <span class="item__meta">Заготовочный цех · л</span>
+              </td>
+              <td>30 л</td>
+              <td>10 дней</td>
+              <td>90 л</td>
+              <td>—</td>
+              <td>120 ₽</td>
+              <td>3 600 ₽</td>
+              <td><span class="badge badge--ok">В норме</span></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="6">Итого на складе</th>
+              <td>83 916 ₽</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
